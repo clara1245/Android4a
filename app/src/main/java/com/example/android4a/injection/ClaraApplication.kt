@@ -12,7 +12,7 @@ class ClaraApplication : Application() {
             // Android context
             androidContext(this@ClaraApplication)
             // modules
-            modules(presentationModule)
+            modules(presentationModule, domainModule, dataModule)
         }
     }
 }
