@@ -21,7 +21,6 @@ class MainViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             val user = getUserUseCase.invoke(emailUser)
             val loginStatus= if (user!=null) {
-                //LoginSuccess(user.email)
                 if (password.equals(user.password)) {
                     LoginSuccess(user.email)
                 } else {
