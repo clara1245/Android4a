@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.example.android4a.R
 import com.example.android4a.presentation.createUser.CreateUserActivity
+import com.example.android4a.presentation.home.HomeActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.email_edit
@@ -21,14 +22,16 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.loginLiveData.observe(this, Observer { it ->
             when (it){
                 is LoginSuccess -> {
-                    MaterialAlertDialogBuilder(this)
+                   /* MaterialAlertDialogBuilder(this)
                         .setTitle("Succès")
                         .setMessage("Authentifié")
                         .setPositiveButton("OK") {
                                 dialog, _ ->
                                 dialog.dismiss()
                         }
-                        .show()
+                        .show()*/
+                    val intent = Intent (this, HomeActivity::class.java)
+                    startActivity(intent)
                 }
                 LoginError -> {
                     MaterialAlertDialogBuilder(this)

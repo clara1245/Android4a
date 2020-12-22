@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.example.android4a.R
+import com.example.android4a.presentation.home.HomeActivity
 import com.example.android4a.presentation.main.MainActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_create_user.*
@@ -21,14 +22,16 @@ class CreateUserActivity : AppCompatActivity() {
         createUserViewModel.createLiveData.observe(this, Observer { it ->
             when (it){
                 is CreateSuccess -> {
-                    MaterialAlertDialogBuilder(this)
+                    /*MaterialAlertDialogBuilder(this)
                         .setTitle("Succès")
                         .setMessage("Compte créé")
                         .setPositiveButton("OK") {
                                 dialog, _ ->
                             dialog.dismiss()
                         }
-                        .show()
+                        .show()*/
+                    val intent = Intent (this, HomeActivity::class.java)
+                    startActivity(intent)
                 }
                 CreateError -> {
                     MaterialAlertDialogBuilder(this)

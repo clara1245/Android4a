@@ -1,6 +1,4 @@
 package com.example.android4a.data.local.models
-
-import android.provider.ContactsContract
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
