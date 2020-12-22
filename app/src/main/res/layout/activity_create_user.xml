@@ -5,18 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/spacing_normal"
-    tools:context=".presentation.main.MainActivity">
-
+    tools:context=".presentation.createUser.CreateUserActivity">
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_input_layout"
+        android:id="@+id/email_create_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Login"
+        android:hint="Email"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/password_input_layout">
+        app:layout_constraintBottom_toTopOf="@id/password_create_layout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit"
@@ -28,46 +27,44 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_input_layout"
+        android:id="@+id/password_create_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:layout_marginTop="@dimen/spacing_normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_input_layout"
-        app:layout_constraintBottom_toTopOf="@id/login_button">
+        app:layout_constraintTop_toBottomOf="@id/email_create_layout"
+        app:layout_constraintBottom_toTopOf="@id/register_button">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        />
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/create_account_button"
-        app:layout_constraintLeft_toLeftOf="@+id/create_account_button"
-        app:layout_constraintRight_toRightOf="@+id/create_account_button"
-        app:layout_constraintTop_toBottomOf="@+id/password_input_layout"
-        android:text="Login"
-        />
+            android:id="@+id/register_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:text="Register"
+            />
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/create_account_button"
+        android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_normal"
-        style="?attr/materialButtonOutlinedStyle"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button"
-        android:text="Create account"
+        app:icon="@drawable/back_24"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

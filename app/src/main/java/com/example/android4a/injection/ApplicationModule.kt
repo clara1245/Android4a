@@ -6,12 +6,15 @@ import com.example.android4a.data.local.DatabaseDao
 import com.example.android4a.data.repository.UserRepository
 import com.example.android4a.domain.usecase.CreateUserUseCase
 import com.example.android4a.domain.usecase.GetUserUseCase
+import com.example.android4a.presentation.createUser.CreateUserViewModel
 import com.example.android4a.presentation.main.MainViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
 val presentationModule = module {
-    factory { MainViewModel(get(),get()) }
+    factory { MainViewModel(get()) }
+    factory { CreateUserViewModel(get()) }
+
 }
     
 val domainModule = module {
