@@ -22,14 +22,6 @@ class CreateUserActivity : AppCompatActivity() {
         createUserViewModel.createLiveData.observe(this, Observer { it ->
             when (it){
                 is CreateSuccess -> {
-                    /*MaterialAlertDialogBuilder(this)
-                        .setTitle("Succès")
-                        .setMessage("Compte créé")
-                        .setPositiveButton("OK") {
-                                dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .show()*/
                     val intent = Intent (this, HomeActivity::class.java)
                     startActivity(intent)
                 }

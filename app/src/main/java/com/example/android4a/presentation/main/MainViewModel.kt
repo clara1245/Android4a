@@ -18,7 +18,7 @@ class MainViewModel(
             val user = getUserUseCase.invoke(emailUser)
             val loginStatus= if (user!=null) {
                 if (password.equals(user.password)) {
-                    LoginSuccess(user.email)
+                    LoginSuccess
                 } else {
                     LoginError
                 }

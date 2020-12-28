@@ -30,5 +30,9 @@ class RetrofitClient{
                                                      .baseUrl(URL)
             return builder.build().create(TMDBApi::class.java)
         }
+
+        fun getFullPosterPath(path: String) : String {
+            return if(path!=null) TMDB_IMAGE_URL + path else ""
+        }
     }
 }

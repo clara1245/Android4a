@@ -22,14 +22,6 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.loginLiveData.observe(this, Observer { it ->
             when (it){
                 is LoginSuccess -> {
-                   /* MaterialAlertDialogBuilder(this)
-                        .setTitle("Succès")
-                        .setMessage("Authentifié")
-                        .setPositiveButton("OK") {
-                                dialog, _ ->
-                                dialog.dismiss()
-                        }
-                        .show()*/
                     val intent = Intent (this, HomeActivity::class.java)
                     startActivity(intent)
                 }

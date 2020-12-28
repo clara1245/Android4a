@@ -22,7 +22,7 @@ class CreateUserViewModel (
                 if ( emailUser.matches(Regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\Q.\\E[a-zA-Z]{2,}$")) ) {
                     val user = User(emailUser,password)
                     createUserUseCase.invoke(user)
-                    CreateSuccess(user.email)
+                    CreateSuccess
                 } else {
                     CreateError
                 }
