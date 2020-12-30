@@ -23,13 +23,13 @@ You can create an account and login to access to this movies list.
 
 ## How to use the app?
 When lauching the application, the first view is a login form, with "login" and "create account" buttons. <br>
-<img align="center" width="400" height="900" src="https://github.com/clara1245/Android4a/blob/master/app/src/ReadMe_pictures/login.jpeg"/> <br>
+<img align="center" width="300" height="600" src="https://github.com/clara1245/Android4a/blob/master/app/src/ReadMe_pictures/login.jpeg"/> <br>
 When the button "create account" is clicked , a register form appears, and you can enter new credentials. Then, you can click on "Register" button and access to
 the home view. You can also go back to the login view once registered. </p>
-<img align="center" width="400" height="900" src="https://github.com/clara1245/Android4a/blob/master/app/src/ReadMe_pictures/register.jpeg"/>
+<img align="center" width="300" height="600" src="https://github.com/clara1245/Android4a/blob/master/app/src/ReadMe_pictures/register.jpeg"/>
 The home activity is a list of items showing the top rated French movies, with a scroll option.
-<img align="center" width="400" height="900" src="https://github.com/clara1245/Android4a/blob/master/app/src/ReadMe_pictures/list2.jpeg"/>
-<img align="center" width="400" height="900" src="https://github.com/clara1245/Android4a/blob/master/app/src/ReadMe_pictures/list1.jpeg"/>
+<img align="center" width="300" height="600" src="https://github.com/clara1245/Android4a/blob/master/app/src/ReadMe_pictures/list2.jpeg"/>
+<img align="center" width="300" height="600" src="https://github.com/clara1245/Android4a/blob/master/app/src/ReadMe_pictures/list1.jpeg"/>
 
 ## Improvements:
 To improve this mobile application, we could add an activity for each item, and an item view, in order to click on a movie item and display all the movie characteristics.
